@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+  agent { label 'vklinux' }
     
     environment {
-        DOCKER_HUB_CREDENTIALS = 'dockerhub-credentials' // Jenkins credential ID
-        DOCKER_HUB_REPO = 'your-dockerhub-username/test-repo'
+        DOCKER_HUB_CREDENTIALS = 'vijay-docker' // Jenkins credential ID
+        DOCKER_HUB_REPO = 'https://hub.docker.com/repository/docker/vijaykankane/b2bsaas/general'
         TEST_IMAGE_TAG = "${BUILD_NUMBER}-${env.GIT_COMMIT?.take(8) ?: 'latest'}"
     }
     
