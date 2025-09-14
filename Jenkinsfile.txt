@@ -1,9 +1,9 @@
 pipeline {
-    agent { label 'jenkins-agent' }
+    agent { label 'vklinux' }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/aryanm12/TravelMemory.git'
+                git branch: 'main', url: 'https://github.com/vijaykankane/TravelMemory.git'
             }
         }
         stage('Install') {
@@ -19,6 +19,7 @@ pipeline {
     }
 
 }
+
 
 
 
